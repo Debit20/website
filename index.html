@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html class="w-[100%] m-0 p-0 overflow-x-hidden" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="icon" href="asset/icon.png">
+    <title>PostPilot</title>
+</head>
+
+<body class=" w-[100%] h-[100%] m-0 p-0 overflow-x-hidden">
+
+    <!-- ****************** Navbar ****************** -->
+    <header class=" container mx-auto bg-white ">
+        <nav class=" container px-4 py-2 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex flex-row">
+                    <!-- Logo -->
+                   <img class="h-[30px]" src="asset/postpilot.png"/>
+                    <div>
+                        <a href="#" class="logo text-black pl-2 text-2xl font-semibold">
+                            PostPilot
+                        </a>
+                    </div>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-10 items-center text-xl">
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-gray-900 font-medium">Resources</button><i
+                            class="fa-solid fa-angle-down pl-2"></i>
+                        <div class="absolute left-0 mt-2 w-30 bg-white shadow-lg rounded-md hidden group-hover:block">
+                            <a href="#" class="block px-2 py-2 text-lg text-gray-600 hover:bg-gray-100">Subitem 1</a>
+                            <a href="#" class="block px-2 py-2 text-lg text-gray-600 hover:bg-gray-100">Subitem 2</a>
+                        </div>
+                    </div>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 font-medium">Success Stories</a>
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-gray-900 font-medium">Company</button><i
+                            class="fa-solid fa-angle-down pl-2"></i>
+                        <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md hidden group-hover:block">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100">About Us</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100">Careers</a>
+                        </div>
+                    </div>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 font-medium">Pricing</a>
+                    <a href="#"
+                        class="border-2 border-black border-r-[6px] border-b-[6px] text-gray-700 py-[0.4rem] px-4 rounded-xl hover:bg-gray-100">Login</a>
+                    <a href="#"
+                        class="bg-orange-500 text-white border-2 border-black border-r-[6px] border-b-[6px] py-2 px-4 rounded-xl hover:scale-105 duration-150">Create
+                        free
+                        account</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden space-y-10">
+                    <button id="hamburger" class="text-gray-700 hover:text-gray-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="bg-white shadow-md lg:hidden hidden">
+            <div class="space-y-6 px-4 py-6">
+                <a
+                    class="block w-full text-left text-gray-700 hover:text-gray-900 font-medium border-b pb-3">Resources</a>
+                <a class="block w-full text-left text-gray-700 hover:text-gray-900 font-medium border-b pb-3">Success
+                    Stories</a>
+                <a
+                    class="block w-full text-left text-gray-700 hover:text-gray-900 font-medium border-b pb-3">Company</a>
+                <a class="block w-full text-left text-gray-700 hover:text-gray-900 font-medium ">Pricing</a>
+                <a href="#"
+                    class="block text-center text-gray-700 hover:text-gray-900 font-medium border px-4 py-2 rounded-md">Login</a>
+                <a href="#"
+                    class="block text-center bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600">Create
+                    Free Account</a>
+            </div>
+        </div>
+    </header>
+    <!-- ******* section2 marketting channel ********** -->
+    <section class="  container   bg-[#E0F8F2] mx-auto  ">
+        <div class="flex  flex-col lg:flex-row items-start justify-between lg:p-5 text-center w-max">
+            <!-- Text Section lg:w-1/2 -->
+            <div class="lg:mt-32 mt-20 mb-6 lg:mb-0" data-aos="fade-right">
+                <h1 class=" lg:ml-40 text-4xl text-justify ml-2 lg:text-7xl font-bold text-gray-800 leading-tight">
+                    Meet your <br> <span class="text-teal-600 font-body font-medium">favorite</span> new
+                    (old)</span><br>
+                    marketing channel.
+                </h1>
+                <p class=" lg:ml-40 mt-8 ml-2 mr-2  text-justify text-lg text-gray-600">Remarkable results. Easier than
+                    email.
+                    Postcard marketing<br>
+                    reinvented for modern ecommerce.</p>
+                <!-- Button -->
+                <div class=" lg:flex lg:justify-self-start lg:ml-40 ">
+                    <button
+                        class="mt-8 justify-self-start bg-orange-500 text-white text-lg font-semibold  border-2 border-black border-r-[6px] border-b-[6px] py-[20px] px-[65px] rounded-2xl hover:scale-105 duration-150">
+                        TRY IT RISK-FREE
+                    </button>
+                    <!-- Ratings Section -->
+                    <div class="lg:mt-10 mt-8  items-center  text-yellow-500">
+                        <span class="text-2xl pl-6">★★★★★</span> <br>
+                        <p class="text-xl pl-6 font-semibold text-gray-600">5.0 Shopify Rating</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Image Section -->
+            <div class="lg:w-1/2 lg:mt-0  " data-aos="fade-left">
+
+                <img class="p-10 lg:h-[650px] h-[500px] w-[500px] lg:w[1200px] mt-16 lg:ml-40 absolute"
+                    src="asset/2ndsection1.png" /> <span> <img
+                        class="relative lg:ml-32 lg:h-[680px] h-[500px] w-[500px]" src="asset/2ndsection.png"
+                        alt=""></span>
+            </div>
+        </div>
+    </section>
+    <!-- ******************* section3 trusted *************** -->
+    <section class="container mx-auto  ">
+        <div class=" mx-auto px-4 py-14 ">
+            <!-- Header -->
+            <div class="text-center mt-11 mb-8">
+                <h1 class="text-3xl lg:text-5xl font-bold text-gray-800">
+                    Trusted by thousands <br> of top DTC <span
+                        class="text-teal-600 font-body font-medium">brands</span>.
+                </h1>
+            </div>
+            <!-- Brand Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 py-11" data-aos="zoom-in">
+                <!-- RUN GUM -->
+                <div class="bg-white p-6 rounded-lg  flex flex-col items-center">
+                    <img src="asset/a1.png" alt="RUN GUM" class="mb-4 rounded-md"> <span> <img
+                            class="w-[184.53px] h-[32px]" src="asset/a11.png" />
+                    </span>
+
+                </div>
+                <!-- Beardbrand -->
+                <div class="bg-white p-6 rounded-lg  flex flex-col items-center" data-aos="zoom-in">
+                    <img src="asset/a2.png" alt="Beardbrand" class="mb-4 rounded-md">
+                    <span><img class="w-[235.03px] h-[32px]" src="asset/a22.png" /> </span>
+                </div>
+                <!-- PROMIX -->
+                <div class="bg-white p-6 rounded-lg  flex flex-col items-center" data-aos="zoom-in">
+                    <img src="asset/a3.png" alt="PROMIX" class="mb-4 rounded-md">
+                    <span><img class="w-[166px] h-[32px]" src="asset/a33.png" /> </span>
+                </div>
+
+                <!-- Scotch Porter -->
+                <div class="bg-white p-6 rounded-lg  flex flex-col items-center" data-aos="zoom-in">
+                    <img src="asset/a4.png" alt="Scotch Porter" class="mb-4 rounded-md">
+                    <span><img class="w-[70px] h-[32px]" src="asset/a44.png" /> </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ****************** section4 direct mail **************** -->
+    <section class=" container mx-auto">
+        <div class=" mx-auto px-4 py-20 bg-[#f3fafa] w-full">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-800 pb-5">
+                    Why use direct mail? <br> It<span class="text-teal-600 font-body font-medium"> works </span>like
+                    crazy.
+                </h1>
+            </div>
+
+            <!-- Stats Section -->
+            <div class=" grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 ">
+
+                <!-- Stat 1 -->
+                <div class=" lg:ml-96 rounded-lg  flex flex-col items-center">
+                    <h2 class="text-6xl font-bold text-gray-800">28X</h2>
+                    <p class="text-lg text-gray-500 text-center p-4">Higher response rate than email <br> & digital</p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class=" p-6 rounded-lg  flex flex-col items-center">
+
+                    <img class="w-[228px] h-[201.09px]" src="asset/hm.png" />
+                    <p class="text-sm text-gray-500 text-center">Your messages get read</p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class=" lg:mr-96 rounded-lg  lg:pt-0 pt-12 flex flex-col items-center">
+                    <h2 class="text-6xl font-bold text-gray-800">17 Days</h2>
+                    <p class="text-sm text-gray-500 text-center p-5">Lifespan of a postcard vs. <br> seconds for email
+                        or
+                        SMS</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ****************** section5 postpilot desc. ********************** -->
+    <section class="bg-[#FDF3EA]  container mx-auto lg:h-full ">
+        <h1 class="lg:text-[72px] text-5xl lg:pt-36 pt-24 font-bold text-center text-[#2E2F35]">PostPilot
+            makes it a <span class="text-teal-600 font-body  font-medium">cinch</span> <br>
+            to send personalized, profit- <br>generating postcards.</h1>
+        <div class="lg:mt-64 mt-44 ml-16">
+            <div class="ml-16">
+                <h1 class="text-6xl"><span class="font-body text-[#009387] font-medium">powerful</span></h1>
+                <h2 class="font-bold text-[#2E2F35] text-6xl">acquisition</h2>
+                <h3 class="font-bold text-[#2E2F35] text-6xl">& retention</h3>
+                <p class="pt-8 pb-6 text-balance text-[#2E2F35]">Send one-off or triggered campaigns to customers &
+                    prospects. Target
+                    email leads with MailMatch™.</p>
+            </div>
+            <img src="asset/power1.png" />
+        </div>
+        <div class="mt-36 mr-16 justify-items-end">
+            <div class="ml-16">
+                <h1 class="text-6xl text-[#2E2F35] pl-2 font-bold"><span
+                        class="font-body text-[#009387] font-medium">Fight back</span>against iOS</h1>
+                <h2 class="font-bold text-[#2E2F35] text-6xl">updates, jacked-up </h2>
+                <h3 class="font-bold text-[#2E2F35] text-6xl">CPCs & spam folders</h3>
+                <p class="pt-8 pb-6 text-balance text-[#2E2F35]">Deliver your message to all of your customers — for
+                    less than the cost of a click.</p>
+            </div>
+            <img src="asset/power2.png" />
+        </div>
+        <div class="mt-36 ml-16">
+            <div class="ml-16">
+                <h1 class="text-6xl font-bold text-[#2E2F35]">Done for <span
+                        class="font-body text-[#009387] font-medium">you</span></h1>
+                <p class="pt-8 pb-6 text-balance text-[#2E2F35]">From design & strategy to stamp-licking, our ecom
+                    experts help you every step of the way.</p>
+            </div>
+            <img src="asset/power3.png" />
+        </div>
+
+        <div class="mt-12 lg:ml-28 text-center lg:text-start">
+            <a href="#"
+                class="inline-block border-2 border-black border-r-[5px] border-b-[5px] bg-orange-500 text-white py-4 px-16 rounded-xl text-lg font-semibold hover:bg-orange-600 transition duration-200">
+                Try it Risk-Free
+            </a>
+        </div>
+    </section>
+    <!-- ****************** section6 brand cards ********************** -->
+    <section class="container mx-auto">
+        <div class="container justify-items-center mx-auto px-4 lg:py-12 w-full">
+            <div class="text-center pt-16 mb-12">
+                <h1 class="text-3xl lg:text-5xl font-bold text-gray-800">
+                    Everything your brand needs to <br> <span class="text-teal-600 font-body font-medium">make your
+                        brand
+                        unforgettable</span>
+                </h1>
+            </div>
+            <div class="grid pt-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1:  -->
+                <div
+                    class="bg-[#FDF3EA] p-6  h-[506.53px] lg:w-[410px] w-[330px] rounded-lg shadow-md flex flex-col items-center">
+                    <div class=" p-4 rounded-full mb-4">
+                        <img class="w-[330px] h-[208.53]" src="asset/s5.1.png" alt="Klavo Logo" class="h-12">
+                    </div>
+                    <h3 class="text-[28px] text-center font-bold text-gray-700">Plug-and-play with <br> your stack</h3>
+                    <p class="text-sm p-3 text-gray-500 text-center">Native integrations provide seamless
+                        <br>segmentation,
+                        automation & tracking. No <br> clunky spreadsheets.
+                    </p>
+                </div>
+
+                <!-- Card 2: -->
+                <div
+                    class="bg-[#E0F8F2]   h-[506.53px] lg:w-[410px] w-[330px] p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <div class=" p-4 rounded-full mb-4">
+                        <img class="w-[330px] h-[208.53] pt-8" src="asset/s5.2.png" alt="Campaign Icon" class="h-12">
+                    </div>
+                    <h3 class="text-[28px] text-center font-bold text-gray-700">Run campaigns <br> on autopilot</h3>
+                    <p class="text-sm pt-4 text-gray-500 text-center">Ink profits while you sleep. Just set it and
+                        <br>forget it.
+                    </p>
+                </div>
+
+                <!-- Card 3:  -->
+                <div
+                    class="bg-[#EEECFF] h-[506.53px] lg:w-[410px] w-[330px] p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <div class=" p-4 rounded-full mb-4">
+                        <img class="w-[330px] h-[208.53]" src="asset/s5.3.png" alt="ROI Icon" class="h-12">
+                    </div>
+                    <h3 class=" text-[28px] text-center font-bold text-gray-700">Real-time ROI dashboard</h3>
+                    <p class="text-sm pt-4 text-gray-500 text-center">Track performance of every postcard by customer or
+                        discount
+                        code. Your CFO will love it.</p>
+                </div>
+
+                <!-- Card 4:  -->
+                <div
+                    class="bg-[#D9F2F7]  h-[506.53px] lg:w-[410px] w-[330px] p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <div class=" p-4 rounded-full mb-4">
+                        <img class="w-[309px] h-[220px]" src="asset/s5.4.png" alt="Handwritten" class="h-12">
+                    </div>
+                    <h3 class="text-[28px] text-center font-bold text-gray-700">Deliver WOW with *real* <br>
+                        handwritten cards</h3>
+                    <p class="text-sm pt-4  text-gray-500 text-center">Our proprietary robots use real pens and <br> ink
+                        for
+                        an
+                        unforgettable VIP touch.</p>
+                </div>
+
+                <!-- Card 5: -->
+                <div
+                    class="bg-[#FAEDED] h-[506.53px] lg:w-[410px] w-[330px] p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <div class=" p-4 rounded-full mb-4">
+                        <img class="w-[250px] h-[181px] mt-4" src="asset/s5.5.png" alt="Pricing Icon" class="h-12">
+                    </div>
+                    <h3 class="text-[28px] mt-4 font-bold text-gray-700">Predictable pricing</h3>
+                    <p class="text-sm p-4 text-gray-500 text-center">Unlike CPCs, postage rates don’t change <br> based
+                        on
+                        competition or who you’re <br> targeting.</p>
+                </div>
+
+                <!-- Card 6:  -->
+                <div
+                    class="bg-[#F1F1F1]  h-[506.53px] lg:w-[410px] w-[330px] p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <div class=" p-4 rounded-full mb-4">
+                        <img class="w-[309px] h-[220px]" src="asset/s5.6.png" alt="Service Icon" class="h-12">
+                    </div>
+                    <h3 class="text-[28px] font-bold text-gray-700">Complimentary <br> concierge service</h3>
+                    <p class="text-sm text-gray-500 pt-6 text-center">DTC is in our DNA. Our pros will build your <br>
+                        strategy and
+                        custom designs using battle- <br>tested best practices.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ****************** first launch fast result ********************** -->
+    <section class="container mx-auto  ">
+        <div class="bg-[#E3F8F8] h-[100%] p-10">
+            <div class=" justify-items-center p-10">
+                <h1 class="text-[#2E2F35]  font-bold text-5xl">Fast launch. Fast results.</h1>
+                <h2 class="text-teal-600 font-body  font-medium text-5xl">Here's how</h2>
+            </div>
+            <div class="p-5 ">
+                <h1 class="text-4xl pl-3 text-[#2e2f3597]  font-bold"><span
+                        class="text-[#00938766] font-body  font-medium text-6xl  p-8">01</span>Segment</h1>
+                <h2 class="text-4xl text-[#2e2f3590] font-bold"><span
+                        class="text-[#00938766] font-body  font-medium text-6xl  p-8">02</span>Design</h2>
+                <div class="flex flex-row gap-8 pl-10 pt-6">
+                    <div>
+                        <h1 class="text-[#009387] font-body  font-medium text-6xl ">03</h1>
+                        <svg width="2" height="97" viewBox="0 0 2 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="0.921875" width="1" height="96" fill="#A0CDCD" />
+                            <rect y="0.921875" width="2" height="57.25" fill="#2E2F35" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-4xl pl-3 text-[#2e2f3597] font-bold">Send</h1>
+                        <p class="text-balance pt-4">One-off announcements or automatically<br> triggered flows.
+                            Customers
+                            receive their<br> personalized cards within a week.</p>
+                        <div class="pl-10">
+                        </div>
+
+                    </div>
+                </div>
+                <h2 class="text-4xl text-[#2e2f3590] font-bold "><span
+                        class="text-[#00938766] font-body  font-medium text-6xl p-8">04</span>Convert</h2>
+            </div>
+        </div>
+    </section>
+    <!-- ****************** section 6 postpilot for dtc  *********************** -->
+    <section class="container mx-auto">
+        <div class=" bg-[#E0F8F2] lg:h-full h-[1000px]  mx-auto lg:py-12 mt-4 w-full justify-items-center">
+
+            <h1 class="text-5xl font-bold lg:mt-20 pt-10 text-center">PostPilot is 🔥 for <span
+                    class=" text-teal-600 font-body font-medium">DTC</span></h1>
+
+            <!-- Testimonial Section -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-20 py-16">
+
+                <!-- Testimonial 1 -->
+                <div class="  py-10 px-10 w-max rounded-lg  flex flex-col justify-items-center border-2 border-black">
+                    <div class="flex mb-4">
+
+                        <img src="asset/testi2.jpg" alt="Helen Guo" class="w-10 h-10 rounded-full mr-4">
+
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Helen Guo</h3>
+                            <p class="text-sm text-gray-500">@HelenGuo_</p>
+                        </div>
+                    </div>
+                    <p class=" text-gray-600 mb-4 text-justify">Using PostPilot for years. Good for re- <br>engagement.
+                        And
+                        you can get creative with <br>messaging.</p>
+                    <a href="#" class="text-blue-500 hover:text-blue-700 text-lg">View on Twitter</a>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="  py-10 px-10 w-max rounded-lg  flex flex-col justify-items-center border-2 border-black">
+                    <div class="flex mb-4">
+
+                        <img src="asset/testi2.jpg" alt="Helen Guo" class="w-10 h-10 rounded-full mr-4">
+
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Helen Guo</h3>
+                            <p class="text-sm text-gray-500">@HelenGuo_</p>
+                        </div>
+                    </div>
+                    <p class=" text-gray-600 mb-4 text-justify">Using PostPilot for years. Good for re- <br>engagement.
+                        And
+                        you can get creative with <br>messaging.</p>
+                    <a href="#" class="text-blue-500 hover:text-blue-700 text-lg">View on Twitter</a>
+                </div>
+
+            </div>
+
+            <!-- Call to Action -->
+            <div class="mt-12 text-center p-4 ">
+                <a href="#"
+                    class="inline-block bg-orange-500 text-white py-3 px-8 rounded-xl text-lg font-semibold border-2  border-black border-r-[6px] border-b-[6px] ">
+                    Try it Risk-Free
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- ******************* section7 obhi drives ********************** -->
+    <section class=" container mx-auto">
+        <div
+            class="bg-[#EEECFF] mx-auto p-6 lg:p-12  w-full flex flex-col-reverse lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-8">
+            <div class="flex flex-col items-center lg:w-1/2 space-y-6">
+                <div class="flex flex-col space-y-4">
+                    <img class="mt-16 lg:w-[613px] lg:h-[601.5px]" src="asset/s7.png" />
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 text-center lg:text-left space-y-6">
+                <h1 class=" text-[40px] lg:text-[65px] font-bold leading-tight text-gray-900">
+                    How <span class="text-teal-600 font-body font-medium">Obhi</span> Drives <br> Profits with Hands-
+                    <br> Off Postcard
+                    <br>Campaigns
+                </h1>
+                <p class="text-lg text-justify pt-5 pb-5 text-[22px] text-gray-700">
+                    The 🚀 supplements brand wanted to offset high ad costs <br> and reach dormant customers. They
+                    scored 1000%+ ROIs.
+                </p>
+
+                <div class="flex lg:flex-row flex-col lg:justify-start lg:space-x-20">
+                    <div class=" py-2  rounded-lg ">
+                        <p class="text-sm  "><span class="text-4xl font-bold">1468%</span> <br> ROI</p>
+                    </div>
+                    <div class="  py-2  rounded-lg ">
+                        <p class="text-sm"><span class="text-4xl font-bold">8.59%</span> <br>Conversion Rate</p>
+                    </div>
+                    <div class="  py-2  rounded-lg">
+                        <p class="text-sm"><span class="text-4xl font-bold">$73,457</span> <br>Sales Generated</p>
+                    </div>
+                </div>
+
+                <div class="mt-10 pt-8">
+                    <a href="https://www.obvi.com/case-study"
+                        class="bg-white font-semibold text-black border-2 border-black border-r-[6px] border-b-[6px] py-4 px-10 rounded-xl hover:bg-orange-500 hover:text-white">
+                        Read Case Study
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ******************* section8 postpilot ********************** -->
+    <section class="container lg:text-center bg-[#FF6D2C] mx-auto ">
+        <div class="flex flex-col lg:flex-row text-start lg:items-center lg:justify-between">
+            <!-- Text Section -->
+            <div class=" p-2 lg:pl-16 lg:w-1/2 mb-6 lg:mb-0">
+                <h1 class=" lg:ml-40 text-[81px] text-justify lg:text-7xl font-extrabold text-white leading-tight">
+                    Try PostPilot<br>Risk-Free
+                </h1>
+                <p class=" p-2 lg:ml-40 mt-8 lg:text-justify text-xl  text-white">No contracts. No comments.
+                    Guaranted results.*<br>
+
+                    <!-- Button -->
+                <div class=" flex lg:justify-self-start lg:ml-[158px]">
+                    <button
+                        class="mt-8 justify-self-start bg-white text-black text-lg font-semibold  border-2 border-black border-r-[6px] border-b-[6px] lg:py-[20px] px-[40px] lg:px-[65px] rounded-2xl hover:scale-105 duration-150">
+                        GET STARTED
+                    </button>
+
+                    <!-- Ratings Section -->
+                    <div class="mt-10  items-center space-x-2 text-white">
+                        <span class="text-2xl pl-6">★★★★★</span> <br>
+                        <p class="text-xl  pl-4 lg:pl-6 text-white">5.0 Shopify Rating</p>
+                    </div>
+                </div>
+
+                <div class=" text-left text-white lg:ml-[160px] mt-10">
+                    <h1>* for qualified brands with over $1m annual Shopify revenue.</h1>
+                </div>
+
+            </div>
+
+            <!-- Image Section -->
+            <div class="  lg:w-[42%] lg:mt-0">
+
+                <img class="w-[596.31px] lg:h-[600px]" src="asset/s8.png" />
+
+            </div>
+        </div>
+
+    </section>
+    <!-- ******************* section9 latest trends ********************** -->
+    <section class="container mx-auto ">
+        <div class="bg-[#F3FAFA] mx-auto justify-items-center  w-full">
+            <h2 class="text-7xl font-bold  pb-20 pt-28 items-center   text-center text-gray-900">
+                Latest trends & <span class="text-teal-600 font-body font-medium ">insights</span>
+            </h2>
+            <div class="flex flex-col pb-28 lg:flex-row gap-24 ">
+                <!-- First Item -->
+                <div class=" lg:w-[410px] lg:h-[360px]  overflow-hidden">
+                    <img src="asset/s9.1.png" alt="3 Low-Cost Campaigns"
+                        class=" w-[320px] justify-self-center lg:w-[410px] h-[272px] p-1 object-cover">
+                    <div class="pt-4">
+                        <h3 class="text-xl lg:text-3xl lg:pl-12 lg:pr-12 font-bold text-gray-800 ">3 Low-Cost Campaigns
+                            You Must Run to Win BFCM</h3>
+
+                    </div>
+                </div>
+                <!-- Second Item -->
+                <div class=" lg:w-[410px] lg:h-[360px]  overflow-hidden">
+                    <img src="asset/s9.2.jpg" alt="3 Low-Cost Campaigns"
+                        class="w-[320px] justify-self-center lg:w-[410px] h-[272px] object-cover p-1">
+                    <div class="pt-4">
+                        <h3 class="text-xl lg:text-3xl lg:pl-10 lg:pr-10  lg:ml-0 font-bold text-gray-800 ">Postcard
+                            Marketing: The
+                            Definitive Guide to High
+                            ROI [2022]</h3>
+                    </div>
+                </div>
+                <!-- Third Item -->
+                <div class="  lg:w-[410px] h-[360px] overflow-hidden">
+                    <img src="asset/s9.3.jpg" alt="3 Low-Cost Campaigns"
+                        class=" w-[320px] justify-self-center lg:w-[410px] h-[272px] object-cover p-1">
+                    <div class="pt-4 ">
+                        <h3 class="lg:text-3xl text-xl lg:pl-10 lg:pr-10 font-bold text-gray-800 ">The Ultimate Guide to
+                            Thank You Notes
+                            for
+                            Ecommerce
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ******************* footer section2 ********************** -->
+    <section class="container mx-auto">
+        <footer class="bg-white w-full h-full py-8 px-2 lg:px-4 overflow-hidden ">
+            <div class=" flex lg:flex-row flex-col p-8">
+                <!-- --- logo section --- -->
+                <div class="flex flex-col">
+                    <div>
+                        <img src="asset/eco.png" />
+                    </div>
+                    <div class=" w-[295px]">
+                        <p class="text-[#58595D] pt-4 pl-4 text-justify text-lg">Our paper is sourced from FSC-certified
+                            mills. We plant
+                            enough trees to more than double our paper usage.</p>
+                    </div>
+                </div>
+                <!-- --- col 1 --- -->
+                <div class="lg:ml-32 ml-5 pt-12 lg:pt-0 space-y-2 ">
+                    <h3 class="text-lg pb-3 font-semibold font-heading text-gray-900">COMPANY</h3>
+
+                    <ul class="space-y-6 text-lg text-gray-800 font-semibold pt-4">
+                        <li><a href="#" class="hover:text-teal-500">About us</a></li>
+                        <li><a href="#" class="hover:text-teal-500">Partner program</a></li>
+                        <li><a href="#" class="hover:text-teal-500">Career</a></li>
+                        <li><a href="contact.html" class="hover:text-teal-500">Contact us</a></li>
+                        <li><a href="#" class="hover:text-teal-500">Privacy Policy</a></li>
+                    </ul>
+
+                </div>
+                <!-- --- col 2 --- -->
+                <div class="pl-40 lg:pt-16">
+                    <ul class="space-y-6 text-lg text-gray-800  font-semibold">
+                        <li><a href="#" class="hover:text-teal-500">pricing</a></li>
+                        <li><a href="#" class="hover:text-teal-500">Reviews</a></li>
+                        <li><a href="#" class="hover:text-teal-500">Direct mail Academy</a></li>
+                        <li><a href="#" class="hover:text-teal-500">Success stories</a></li>
+                        <li><a href="#" class="hover:text-teal-500">Terms & conditionsy</a></li>
+                    </ul>
+                </div>
+                <!-- --- col 3 --- -->
+                <div class="lg:pl-40 lg:pt-12 space-y-3">
+                    <h3 class="text-lg pb-3 font-semibold font-heading text-gray-900">CONTACT</h3>
+                    <div class="flex flex-row text-gray-600 font-semibold">
+                        <i class="fa-regular fa-envelope md:text-xl md:pr-4 mt-1 text-slate-600"></i>
+                        <h2>support@postpilot.com</h2>
+                    </div>
+                    <h3 class="pt-4 text-gray-500">
+                        Printed with ❤️️️ at our facility in South Carolina.</h3>
+                </div>
+            </div>
+
+
+
+            <!-- Bottom Section -->
+            <div class="flex justify-between  mt-20 border-t-2  border-gray-300 pt-8 pb-5">
+                <p class="text-lg text-gray-600">© 2022 PostPilot, Inc. All rights reserved.</p>
+                <div class="space-x-6 items-end flex md:flex-row flex-col">
+                    <a href="#"
+                        class="border-2 border-black border-r-[6px] border-b-[6px] text-gray-700 py-[0.4rem] px-4 rounded-xl hover:bg-gray-100">Login</a>
+                    <a href="#"
+                        class="bg-orange-500 text-white border-2 border-black border-r-[6px] border-b-[6px] md:py-2 md:px-4  rounded-xl hover:scale-105 duration-150">Create
+                        free
+                        account</a>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            offset: 85,
+            once: true,
+        });
+    </script>
+</body>
+
+</html>

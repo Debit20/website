@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" class=" w-[100%] h-[100%] m-0 p-0 overflow-x-hidden">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <title>PostPilot</title>
+    <link rel="icon" href="asset/icon.png">
+</head>
+
+<body class=" w-[100%] h-[100%] m-0 p-0 overflow-x-hidden">
+    <!-- ****************** Navbar ****************** -->
+    <header class="container bg-white  mx-auto ">
+        <nav class="mx-auto px-4 py-2 sm:px-6 lg:px-8 ">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex flex-row">
+                    <!-- Logo -->
+                    <svg width="53" height="30" viewBox="0 0 53 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.18876 1.59594C0.728147 1.07774 1.09601 0.258579 1.78933 0.258579H45.9583C49.8275 0.258579 52.9642 3.3952 52.9642 7.26442V22.9575C52.9642 26.8266 49.8275 29.9633 45.9583 29.9633H24.2626C23.268 29.9633 22.3209 29.538 21.6601 28.7947L19.404 26.2565C18.9434 25.7383 19.3112 24.9192 20.0045 24.9192H45.9583C47.0417 24.9192 47.92 24.0409 47.92 22.9575V7.26442C47.92 6.18106 47.0417 5.3028 45.9583 5.3028H6.04737C5.05279 5.3028 4.1057 4.87747 3.44493 4.13412L1.18876 1.59594Z"
+                            fill="#02A99B" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.3251 0.0576973L33.2427 14.1005C33.5735 14.4603 34.1405 14.4629 34.4748 14.1062L45.842 1.97501L49.5227 5.424L38.1558 17.5552C35.8159 20.0523 31.847 20.034 29.5302 17.5155L16.6126 3.47266L20.3251 0.0576973Z"
+                            fill="#02A99B" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.0092 14.4892C10.5454 13.9717 10.9126 13.1493 11.6075 13.1493H19.6784C20.418 13.1493 21.0176 13.7489 21.0176 14.4886V16.8543C21.0176 17.594 20.418 18.1935 19.6784 18.1935H15.2865C14.6775 18.1935 14.0973 17.9345 13.6909 17.481L11.0092 14.4892Z"
+                            fill="#02A99B" />
+                    </svg>
+                    <div>
+                        <a href="index.html" class="logo text-black pl-2 text-2xl font-semibold">
+                            PostPilot
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-10 items-center text-xl">
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-gray-900 font-medium">Resources</button><i
+                            class="fa-solid fa-angle-down pl-2"></i>
+                        <div class="absolute left-0 mt-2 w-30 bg-white shadow-lg rounded-md hidden group-hover:block">
+                            <a href="#" class="block px-2 py-2 text-lg text-gray-600 hover:bg-gray-100">Subitem 1</a>
+                            <a href="#" class="block px-2 py-2 text-lg text-gray-600 hover:bg-gray-100">Subitem 2</a>
+                        </div>
+                    </div>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 font-medium">Success Stories</a>
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-gray-900 font-medium">Company</button><i
+                            class="fa-solid fa-angle-down pl-2"></i>
+                        <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md hidden group-hover:block">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100">About Us</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100">Careers</a>
+                        </div>
+                    </div>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 font-medium">Pricing</a>
+                    <a href="#"
+                        class="border-2 border-black border-r-[6px] border-b-[6px] text-gray-700 py-[0.4rem] px-4 rounded-xl hover:bg-gray-100">Login</a>
+                    <a href="#"
+                        class="bg-orange-500 text-white border-2 border-black border-r-[6px] border-b-[6px] py-2 px-4 rounded-xl hover:scale-105 duration-150">Create
+                        free
+                        account</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden space-y-10">
+                    <button id="hamburger" class="text-gray-700 hover:text-gray-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="bg-white shadow-md md:hidden hidden">
+            <div class="space-y-6 px-4 py-6">
+                <a
+                    class="block w-full text-left text-gray-700 hover:text-gray-900 font-medium border-b pb-3">Resources</a>
+                <a class="block w-full text-left text-gray-700 hover:text-gray-900 font-medium border-b pb-3">Success
+                    Stories</a>
+                <a
+                    class="block w-full text-left text-gray-700 hover:text-gray-900 font-medium border-b pb-3">Company</a>
+                <a class="block w-full text-left text-gray-700 hover:text-gray-900 font-medium ">Pricing</a>
+                <a href="#"
+                    class="block text-center text-gray-700 hover:text-gray-900 font-medium border px-4 py-2 rounded-md">Login</a>
+                <a href="#"
+                    class="block text-center bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600">Create
+                    Free Account</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ****************** Section 1 ****************** -->
+    <section class="container mx-auto">
+        <div class=" mx-auto p-6">
+            <div class="pt-20">
+                <h2 class="text-5xl pl-12 p-2 font-bold text-start text-gray-800 mb-6">────── Contact us</h2>
+                <div class="flex flex-wrap md:px-44 justify-between">
+                    <!-- Address Card -->
+                    <div class="flex items-center  p-6  w-80">
+                        <div class="bg-gray-200 p-4 py-3 rounded-full">
+                            <i class="fa-solid fa-location-dot text-3xl"></i>
+                        </div>
+                        <div class="ml-8 mt-10 ">
+                            <h3 class="text-2xl py-2 font-bold text-gray-800">Address</h3>
+                            <p class="text-gray-600 text-lg">Jaipur, Rajasthan INDIA</p>
+                            <p class="text-gray-600 text-lg">Pin 342087</p>
+                        </div>
+                    </div>
+
+                    <!-- Phone Card -->
+                    <div class="flex items-center  p-6 rounded-lg w-80">
+                        <div class="bg-gray-200 p-3 rounded-full">
+                            <i class="fa-solid fa-phone text-3xl"></i>
+                        </div>
+                        <div class="ml-10">
+                            <h3 class="text-2xl  py-2 font-bold text-gray-800">Call us</h3>
+                            <p class="text-gray-600 text-lg">+91 98765 43210</p>
+                        </div>
+                    </div>
+
+                    <!-- Email Card -->
+                    <div class="flex items-center  p-6 rounded-lg w-80">
+                        <div class="bg-gray-200 p-3 rounded-full">
+                            <i class="fa-regular fa-envelope text-3xl"></i>
+                        </div>
+                        <div class="ml-10">
+                            <h3 class="text-2xl py-2  font-bold text-gray-800">Email us</h3>
+                            <p class="text-gray-600 text-lg">info@test.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ****************** Get in touch ****************** -->
+    <section class=" container mx-auto">
+        <div class="bg-[#F3FAFA] pb-10 pt-5">
+            <h1 class="text-[50px] font-bold text-center text-[#2E2F35] pb-8 font-heading">Get in touch with us.
+                <br>We're here to assist you.
+            </h1>
+            <div class="w-full max-w-2xl mx-auto bg-[#FDF3EA] text-white p-8 rounded-3xl shadow-lg shadow-slate-300 ">
+                <div class="w-full max-w-2xl  text-black p-8">
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-6" id="form" onsubmit="return validateForm(event)">
+                        <div class="flex flex-col" id="fullname">
+                            <label class="mb-1 text-sm text-[#808080] font-heading">Full Name</label>
+                            <div class="border-[#808080] border-b-[1px]  border-r-0 border-l-0 border-t-0  p-3  ">
+                                <input type="text" placeholder="Ex: Debjit Paul" onkeyup="validateName()" id="name"
+                                    class="focus:outline-none bg-transparent ">
+                            </div>
+                            <span id="name-error" class="text-red-600 font-medium"></span>
+
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="mb-1 text-sm text-[#808080] font-heading">Email Address</label>
+                            <input type="email" placeholder=""
+                                class="border-[#808080] border-b-[1px] border-r-0 border-l-0 border-t-0 focus:outline-none p-3 bg-transparent"
+                                onkeyup="validateEmail()" id="email">
+                            <span id="email-error" class="text-red-600 font-medium"></span>
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="mb-1 text-sm text-[#808080] font-heading">Phone Number</label>
+                            <input type="tel" placeholder="" onkeyup="validateNum()" id="num" maxlength="10"
+                                class="border-[#808080] border-b-[1px] border-r-0 border-l-0 border-t-0 focus:outline-none p-3 bg-transparent">
+                            <span id="num-error" class="text-red-600 font-medium"></span>
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="mb-1 text-sm text-[#808080] font-heading">Date of Birth</label>
+                            <input type="date"
+                                class=" border-[#808080] border-b-[1px] border-r-0 border-l-0 border-t-0  p-3 bg-transparent " min="1925-01-01"
+                                 onkeyup="validateDate()" id="date">
+                                <span id="date-error" class="text-red-600 font-medium"></span>
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="mb-1 text-sm text-[#808080] font-heading">Gender</label>
+                            <select
+                                class="border-[#808080] border-b-[1px] border-r-0 border-l-0 border-t-0 focus:outline-none p-3 bg-transparent"
+                                onkeyup="validateGender()" id="gender">
+                                <option value=""> Select Gender</option>
+                                <option>male</option>
+                                <option>female</option>
+                            </select>
+                            <span id="gender-error" class="text-red-600 font-medium"></span>
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="mb-1 text-sm text-[#808080] font-heading">City</label>
+                            <select name="city" id="city"
+                                class="text-black bg-[#FDF3EA]  border-[#808080] border-b-[1px] border-r-0 border-l-0 border-t-0 focus:outline-none p-3"
+                                onkeyup="validateCity()">
+                                <option value="">Select City</option>
+
+                                <!-- Cities in Andhra Pradesh -->
+                                <optgroup label="Andhra Pradesh">
+                                    <option value="Amaravati">Amaravati</option>
+                                    <option value="Visakhapatnam">Visakhapatnam</option>
+                                    <option value="Vijayawada">Vijayawada</option>
+                                    <option value="Guntur">Guntur</option>
+                                    <option value="Kakinada">Kakinada</option>
+                                </optgroup>
+                                <!-- Cities in Arunachal Pradesh -->
+                                <optgroup label="Arunachal Pradesh">
+                                    <option value="Itanagar">Itanagar</option>
+                                    <option value="Tawang">Tawang</option>
+                                </optgroup>
+                                <!-- Cities in Assam -->
+                                <optgroup label="Assam">
+                                    <option value="Guwahati">Guwahati</option>
+                                    <option value="Jorhat">Jorhat</option>
+                                    <option value="Dibrugarh">Dibrugarh</option>
+                                    <option value="Silchar">Silchar</option>
+                                </optgroup>
+                                <!-- Cities in Bihar -->
+                                <optgroup label="Bihar">
+                                    <option value="Patna">Patna</option>
+                                    <option value="Gaya">Gaya</option>
+                                    <option value="Bhagalpur">Bhagalpur</option>
+                                    <option value="Muzaffarpur">Muzaffarpur</option>
+                                </optgroup>
+                                <!-- Cities in Chhattisgarh -->
+                                <optgroup label="Chhattisgarh">
+                                    <option value="Raipur">Raipur</option>
+                                    <option value="Bilaspur">Bilaspur</option>
+                                    <option value="Korba">Korba</option>
+                                </optgroup>
+                                <!-- Cities in Goa -->
+                                <optgroup label="Goa">
+                                    <option value="Panaji">Panaji</option>
+                                    <option value="Margao">Margao</option>
+                                    <option value="Vasco da Gama">Vasco da Gama</option>
+                                </optgroup>
+                                <!-- Cities in Gujarat -->
+                                <optgroup label="Gujarat">
+                                    <option value="Ahmedabad">Ahmedabad</option>
+                                    <option value="Surat">Surat</option>
+                                    <option value="Vadodara">Vadodara</option>
+                                    <option value="Rajkot">Rajkot</option>
+                                </optgroup>
+                                <!-- Cities in Haryana -->
+                                <optgroup label="Haryana">
+                                    <option value="Gurugram">Gurugram</option>
+                                    <option value="Faridabad">Faridabad</option>
+                                    <option value="Ambala">Ambala</option>
+                                </optgroup>
+                                <!-- Cities in Himachal Pradesh -->
+                                <optgroup label="Himachal Pradesh">
+                                    <option value="Shimla">Shimla</option>
+                                    <option value="Kullu">Kullu</option>
+                                    <option value="Manali">Manali</option>
+                                </optgroup>
+                                <!-- Cities in Jharkhand -->
+                                <optgroup label="Jharkhand">
+                                    <option value="Ranchi">Ranchi</option>
+                                    <option value="Jamshedpur">Jamshedpur</option>
+                                    <option value="Dhanbad">Dhanbad</option>
+                                </optgroup>
+                                <!-- Cities in Karnataka -->
+                                <optgroup label="Karnataka">
+                                    <option value="Bangalore">Bangalore</option>
+                                    <option value="Mysore">Mysore</option>
+                                    <option value="Hubli">Hubli</option>
+                                    <option value="Mangalore">Mangalore</option>
+                                </optgroup>
+                                <!-- Cities in Kerala -->
+                                <optgroup label="Kerala">
+                                    <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                                    <option value="Kochi">Kochi</option>
+                                    <option value="Kozhikode">Kozhikode</option>
+                                    <option value="Malappuram">Malappuram</option>
+                                </optgroup>
+                                <!-- Cities in Madhya Pradesh -->
+                                <optgroup label="Madhya Pradesh">
+                                    <option value="Bhopal">Bhopal</option>
+                                    <option value="Indore">Indore</option>
+                                    <option value="Gwalior">Gwalior</option>
+                                    <option value="Jabalpur">Jabalpur</option>
+                                </optgroup>
+                                <!-- Cities in Maharashtra -->
+                                <optgroup label="Maharashtra">
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Pune">Pune</option>
+                                    <option value="Nagpur">Nagpur</option>
+                                    <option value="Nashik">Nashik</option>
+                                    <option value="Thane">Thane</option>
+                                </optgroup>
+                                <!-- Cities in Manipur -->
+                                <optgroup label="Manipur">
+                                    <option value="Imphal">Imphal</option>
+                                </optgroup>
+                                <!-- Cities in Meghalaya -->
+                                <optgroup label="Meghalaya">
+                                    <option value="Shillong">Shillong</option>
+                                </optgroup>
+                                <!-- Cities in Mizoram -->
+                                <optgroup label="Mizoram">
+                                    <option value="Aizawl">Aizawl</option>
+                                </optgroup>
+                                <!-- Cities in Nagaland -->
+                                <optgroup label="Nagaland">
+                                    <option value="Kohima">Kohima</option>
+                                </optgroup>
+                                <!-- Cities in Odisha -->
+                                <optgroup label="Odisha">
+                                    <option value="Bhubaneswar">Bhubaneswar</option>
+                                    <option value="Cuttack">Cuttack</option>
+                                    <option value="Rourkela">Rourkela</option>
+                                </optgroup>
+                                <!-- Cities in Punjab -->
+                                <optgroup label="Punjab">
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Amritsar">Amritsar</option>
+                                    <option value="Ludhiana">Ludhiana</option>
+                                    <option value="Jalandhar">Jalandhar</option>
+                                </optgroup>
+                                <!-- Cities in Rajasthan -->
+                                <optgroup label="Rajasthan">
+                                    <option value="Jaipur">Jaipur</option>
+                                    <option value="Udaipur">Udaipur</option>
+                                    <option value="Jodhpur">Jodhpur</option>
+                                    <option value="Kota">Kota</option>
+                                </optgroup>
+                                <!-- Cities in Sikkim -->
+                                <optgroup label="Sikkim">
+                                    <option value="Gangtok">Gangtok</option>
+                                </optgroup>
+                                <!-- Cities in Tamil Nadu -->
+                                <optgroup label="Tamil Nadu">
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Coimbatore">Coimbatore</option>
+                                    <option value="Madurai">Madurai</option>
+                                    <option value="Trichy">Trichy</option>
+                                </optgroup>
+                                <!-- Cities in Telangana -->
+                                <optgroup label="Telangana">
+                                    <option value="Hyderabad">Hyderabad</option>
+                                </optgroup>
+                                <!-- Cities in Tripura -->
+                                <optgroup label="Tripura">
+                                    <option value="Agartala">Agartala</option>
+                                </optgroup>
+                                <!-- Cities in Uttar Pradesh -->
+                                <optgroup label="Uttar Pradesh">
+                                    <option value="Lucknow">Lucknow</option>
+                                    <option value="Kanpur">Kanpur</option>
+                                    <option value="Agra">Agra</option>
+                                    <option value="Varanasi">Varanasi</option>
+                                </optgroup>
+                                <!-- Cities in Uttarakhand -->
+                                <optgroup label="Uttarakhand">
+                                    <option value="Dehradun">Dehradun</option>
+                                    <option value="Haridwar">Haridwar</option>
+                                </optgroup>
+                                <!-- Cities in West Bengal -->
+                                <optgroup label="West Bengal">
+                                    <option value="Kolkata">Kolkata</option>
+                                    <option value="Siliguri">Siliguri</option>
+                                </optgroup>
+                                <!-- Union Territories -->
+                                <optgroup label="Union Territories">
+                                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and
+                                        Daman and Diu</option>
+                                    <option value="Lakshadweep">Lakshadweep</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Puducherry">Puducherry</option>
+                                    <option value="Ladakh">Ladakh</option>
+                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                </optgroup>
+                            </select>
+                            <span id="city-error" class="text-red-600 font-medium"></span>
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="mb-1 text-sm text-[#808080] font-heading">State</label>
+                            <!-- States of India -->
+                            <div>
+                                <select class=" border-[#808080] border-b-[1px] border-r-0 border-l-0 border-t-0
+                            p-3 bg-[#FDF3EA] focus:outline-none" onkeyup="validateState()" id="state">
+                                    <option value=""> Select State</option>
+                                    <option value="AP">Andhra Pradesh</option>
+                                    <option value="AR">Arunachal Pradesh</option>
+                                    <option value="AS">Assam</option>
+                                    <option value="BR">Bihar</option>
+                                    <option value="CT">Chhattisgarh</option>
+                                    <option value="GA">Gujarat</option>
+                                    <option value="HR">Haryana</option>
+                                    <option value="HP">Himachal Pradesh</option>
+                                    <option value="JK">Jammu and Kashmir</option>
+                                    <option value="GA">Goa</option>
+                                    <option value="JH">Jharkhand</option>
+                                    <option value="KA">Karnataka</option>
+                                    <option value="KL">Kerala</option>
+                                    <option value="MP">Madhya Pradesh</option>
+                                    <option value="MH">Maharashtra</option>
+                                    <option value="MN">Manipur</option>
+                                    <option value="ML">Meghalaya</option>
+                                    <option value="MZ">Mizoram</option>
+                                    <option value="NL">Nagaland</option>
+                                    <option value="OR">Odisha</option>
+                                    <option value="PB">Punjab</option>
+                                    <option value="RJ">Rajasthan</option>
+                                    <option value="SK">Sikkim</option>
+                                    <option value="TN">Tamil Nadu</option>
+                                    <option value="TG">Telangana</option>
+                                    <option value="TR">Tripura</option>
+                                    <option value="UT">Uttarakhand</option>
+                                    <option value="UP">Uttar Pradesh</option>
+                                    <option value="WB">West Bengal</option>
+                                    <option value="AN">Andaman and Nicobar Islands</option>
+                                    <option value="CH">Chandigarh</option>
+                                    <option value="DN">Dadra and Nagar Haveli</option>
+                                    <option value="DD">Daman and Diu</option>
+                                    <option value="DL">Delhi</option>
+                                    <option value="LD">Lakshadweep</option>
+                                    <option value="PY">Puducherry</option>
+                                </select>
+                            </div>
+                            <span id="state-error" class="text-red-600 font-medium"></span>
+
+                        </div>
+
+                        <div class="flex flex-col ">
+                            <label class="mb-1 text-sm text-[#808080] font-heading">Address</label>
+                            <input type="text" placeholder=""
+                                class="border-[#808080] border-b-[1px] border-r-0 border-l-0 border-t-0 focus:outline-none p-3 bg-transparent"
+                                onkeyup="validateAddress()" id="address">
+                            <span id="address-error" class="text-red-600 font-medium"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-[#808080] mb-2 font-heading">Request a counselling session</label>
+                            <div class="flex items-center gap-4" onsubmit="validateRadio()">
+                                <label class="flex items-center text-black">
+                                    <input type="radio" name="counselling" value="yes" id="yes"
+                                        class="w-4 h-4 mr-2 accent-[#fa753cf8]  focus:ring-1 focus:ring-slate-500 focus:rounded-full">
+                                    Yes
+                                </label>
+                                <label class="flex items-center text-black">
+                                    <input id="no" type="radio" name="counselling" value="no"
+                                        class="w-4 h-4 mr-2 accent-[#fa753cf8]  focus:ring-1 focus:ring-slate-500 focus:rounded-full ">
+                                    No
+                                </label>
+
+                            </div>
+                            <span id="check-error" class="text-red-600 font-medium"></span>
+                        </div>
+                        <div>
+                            <label class="text-sm block mb-2 text-[#808080] font-heading">Upload your CV/Resume:</label>
+                            <div
+                                class="flex items-center gap-2 p-2  border-[#808080] border-b-[1px] border-r-0 border-l-0 border-t-0 focus:outline-none">
+                                <img src="asset/Vector.png" />
+                                <input type="file"
+                                    class="w-full text-slate-500 file:border-0 file:bg-transparent file:text-black file:px-3 file:py-1 focus:outline-none bg-transparent cursor-pointer"
+                                    onkeyup="validUpload()" id="upload">
+                            </div>
+                            <span id="upload-error" class="text-red-600 font-medium"></span>
+                        </div>
+                        <div class="flex items-center gap-2 md:col-span-2">
+                            <input type="checkbox" onkeyup="validCheckbox()" id="checkbox"
+                                class="w-5 h-5 accent-orange-200 ring-1 ring-orange-500 focus:ring-2 focus:ring-orange-400 ">
+                            <label class="text-sm font-heading text-[#797979] font-semibold">Agree to terms and
+                                conditions</label>
+                                <span id="valid-error" class="text-red-600 font-medium"></span>
+                        </div>
+                        <div>
+                            <button type="submit"
+                                class="relative font-semibold lg:w-max py-4 lg:px-20 px-10 rounded-sm items-center flex justify-center overflow-hidden bg-[#FF6D2C] text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-slate-800 before:duration-500 before:ease-out hover:shadow-orange-600 hover:before:h-56 hover:before:w-80">
+                                <span class="relative z-10 font-heading"> Submit Information </span>
+                            </button>
+                            <span id="pleaseFix"></span> <!-- Fixed ID (removed extra space) -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </section>
+
+    <!-- ****************** map location ****************** -->
+    <section class="container mx-auto">
+        <div class=" p-4 md:justify-items-center md:p-10">
+            <iframe
+                class=" w-[450px] md:w-[1290px] md:h-[555.42px] hover:scale-105 duration-1000 cursor-pointer  shadow-2xl"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.650548036354!2d72.93032137607672!3d26.17550799138131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418c261937c551%3A0x65b7b9d2944ffeb4!2sCapsitech!5e0!3m2!1sen!2sin!4v1738305578906!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+        <div class="w-full max-w-3xl  p-8 justify-self-center">
+            <h2 class="text-5xl font-semibold text-center text-gray-900">Do you have any question</h2>
+            <p class="text-center text-gray-600 mt-4">Our support team is ready to help you, please contact with them
+            </p>
+
+            <div class="mt-12 space-y-3 mb-10">
+                <!-- FAQ Item 1 -->
+                <div class="border-b">
+                    <button
+                        class="w-full text-left py-4 flex space-x-5 items-center text-lg font-medium text-gray-700 hover:text-blue-600 ">
+                        <span><i class="fa-solid fa-circle-plus text-orange-600"></i></span>
+                        <span>How to contact with riders emergency?</span>
+
+                    </button>
+                    <div class="hidden text-gray-600 px-4 pb-4">You can contact riders through the emergency support
+                        section
+                        in the app.</div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border-b">
+                    <button
+                        class="w-full text-left py-4 flex space-x-5 items-center text-lg font-medium text-gray-700 hover:text-blue-600 ">
+                        <span><i class="fa-solid fa-circle-plus text-orange-600"></i></span>
+                        <span>App installation failed, how to update system information?</span>
+
+                    </button>
+                    <div class="hidden text-gray-600 px-4 pb-4">Ensure your device has the latest OS updates and try
+                        reinstalling the app.</div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border-b">
+                    <button
+                        class="w-full text-left py-4 flex space-x-5 items-center text-lg font-medium text-gray-700 hover:text-blue-600 ">
+                        <span><i class="fa-solid fa-circle-plus text-orange-600"></i></span>
+                        <span>Website response taking time, how to improve?</span>
+
+                    </button>
+                    <div class="text-gray-600  text-justify px-8 pb-4">
+                        Get your blood tests delivered at home, collect a sample from management news. Optimize website
+                        performance by caching and reducing page load time.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border-b">
+                    <button
+                        class="w-full text-left py-4 flex space-x-5 items-center text-lg font-medium text-gray-700 hover:text-blue-600 ">
+                        <span><i class="fa-solid fa-circle-plus text-orange-600"></i></span>
+                        <span>New update fixed all bugs and issues</span>
+
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ****************** SUNSCRIBE SECTION ****************** -->
+    <section class="container mx-auto">
+        <div class="bg-[#F3FAFA] font-heading h-[500px]  ">
+
+            <h1 class="text-center pt-16 md:text-5xl text-3xl font-semibold ">Subscribe to our Newsletter<br>for Design
+                Insights</h1>
+            <p class="text-center p-10 text-xl text-slate-600">Be the first to discover trends, inspirations, and
+                special
+                offers as<br> we bring the world of design
+                directly to your inbox
+            </p>
+
+            <div
+                class="flex  md:w-[750px] w-[355px] mx-auto mt-8 items-center justify-around md:gap-20 md:h-[80px] h-[50px] bg-white drop-shadow-xl ">
+                <div>
+                    <form>
+                        <i class="fa-regular fa-envelope md:text-2xl md:pr-4 mt-2 text-slate-600"></i> <input
+                            class="md:text-xl " type="text" placeholder="Enter your email address">
+                    </form>
+                </div>
+                <div class="md:pl-24">
+                    <button
+                        class="bg-[#FF6D2C] text-white   md:text-xl font-semibold md:py-4 py-1 md:px-14 px-2 rounded-md shadow-xl hover:scale-105 duration-800">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ****************** FOOTER ****************** -->
+    <footer class="container mx-auto bg-white text-black pt-24 pb-12  md:h-max h-[1200px]">
+
+        <div class="max-w-[1400px] mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Logo and Description -->
+            <div>
+                <h2 class="font-semibold text-black text-left text-[32px] flex flex-row ">
+                    <!-- Logo -->
+                    <svg width="40" height="42" viewBox="0 0 72 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.625939 2.633C-0.00406158 1.92476 0.499072 0.805176 1.44735 0.805176H61.8586C67.1507 0.805176 71.4409 5.09213 71.4409 10.3804V31.8288C71.4409 37.1169 67.1507 41.4039 61.8586 41.4039H32.1847C30.8244 41.4039 29.5291 40.8226 28.6253 39.8068L25.5395 36.3377C24.9095 35.6294 25.4126 34.5098 26.3609 34.5098H61.8586C63.3405 34.5098 64.5417 33.3095 64.5417 31.8288V10.3804C64.5417 8.89967 63.3405 7.69932 61.8586 7.69932H7.27121C5.91089 7.69932 4.61553 7.118 3.71178 6.10204L0.625939 2.633Z"
+                            fill="#1F1F1F" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M26.7993 0.530762L44.4672 19.7237C44.9196 20.2154 45.6952 20.219 46.1523 19.7314L61.6997 3.15123L66.7339 7.86511L51.1869 24.4453C47.9866 27.8582 42.5582 27.8332 39.3894 24.391L21.7217 5.19813L26.7993 0.530762Z"
+                            fill="#1F1F1F" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M14.0576 20.2551C13.4232 19.5478 13.9255 18.4238 14.8759 18.4238H25.9147C26.9263 18.4238 27.7464 19.2433 27.7464 20.2542V23.4876C27.7464 24.4985 26.9263 25.3179 25.9147 25.3179H19.9078C19.0749 25.3179 18.2813 24.9638 17.7254 24.3441L14.0576 20.2551Z"
+                            fill="#1F1F1F" />
+                    </svg>
+
+
+                    <a href="index.html" class="text-black">PostPilot</a>
+                </h2>
+                <p class="text-black mt-2">VivaDecor your premier destination for luxury and modern interior design.
+                </p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-white hover:scale-110 duration-120 "><i
+                            class="fab fa-facebook-f w-7 h-7 bg-black p-2 text-lg"></i></a>
+                    <a href="#" class="text-white  hover:scale-110 duration-120"><i
+                            class="fab fa-twitter w-7 h-7 bg-black p-2 text-lg"></i></a>
+                    <a href="#" class="text-white  hover:scale-110 duration-120"><i
+                            class="fab fa-instagram w-7 h-7 bg-black p-2 text-lg"></i></a>
+                    <a href="#" class="text-white hover:scale-110 duration-120"><i
+                            class="fab fa-linkedin-in w-7 h-7 bg-black p-2 text-lg"></i></a>
+                </div>
+            </div>
+            <!-- Column 1 -->
+            <div class="mt-2 pl-16">
+                <h4 class="font-bold mb-4 text-[22px]">Our Services</h4>
+                <ul class="text-black font-semibold space-y-6">
+                    <li>Interior Design</li>
+                    <li>Outdoor Design</li>
+                    <li>Lighting Design</li>
+                    <li>Office Design</li>
+                </ul>
+            </div>
+            <!-- Column 2 -->
+            <div class="mt-2 pl-12">
+                <h4 class="font-bold mb-4 text-[22px]">Our Services</h4>
+                <ul class="text-black font-semibold  space-y-6">
+                    <li>Reviews</li>
+                    <li>Careers</li>
+                    <li>Pricing</li>
+                    <li>Press Inquiries</li>
+                </ul>
+            </div>
+            <!-- Column 3 -->
+            <div class="mt-2 pl-12">
+                <h4 class="font-bold mb-4 text-[22px]">Our services</h4>
+                <ul class="text-black font-semibold space-y-6">
+                    <li>info@vivadecor.com</li>
+                    <li>Design Avenue Cityville,</li>
+                    <li> CA 90210 United States</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
